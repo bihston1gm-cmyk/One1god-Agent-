@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">One1god Dev Agent</string>
+    <string name="title_activity_main">One1god Dev Agent</string>
+    <string name="package_name">com.one1god.devagent</string>
+    <string name="custom_url_scheme">com.one1god.devagent</string>
+</resources>
