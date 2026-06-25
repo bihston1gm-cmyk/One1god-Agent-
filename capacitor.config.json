@@ -1,0 +1,22 @@
+{
+  "appId": "com.one1god.devagent",
+  "appName": "One1god Dev Agent",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "backgroundColor": "#04030f",
+      "androidSplashResourceName": "splash",
+      "showSpinner": false
+    },
+    "Filesystem": {
+      "iosScheme": "capacitor"
+    }
+  }
+}
