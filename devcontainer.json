@@ -1,0 +1,41 @@
+{
+  "name": "One1god Android Dev Environment",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17",
+      "jdkDistro": "ms"
+    }
+  },
+
+  "onCreateCommand": "bash .devcontainer/setup-android.sh",
+
+  "postCreateCommand": "npm install --legacy-peer-deps && npm install -g @capacitor/cli vite",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "saoudrizwan.claude-dev",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+
+  "remoteEnv": {
+    "JAVA_HOME": "/usr/lib/jvm/msopenjdk-17-amd64",
+    "ANDROID_HOME": "/home/vscode/android-sdk",
+    "PATH": "${containerEnv:PATH}:/home/vscode/android-sdk/cmdline-tools/latest/bin:/home/vscode/android-sdk/platform-tools"
+  },
+
+  "mounts": [
+    "source=one1god-android-sdk,target=/home/vscode/android-sdk,type=volume"
+  ],
+
+  "forwardPorts": [5173, 3000]
+}
